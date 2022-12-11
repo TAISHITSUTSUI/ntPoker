@@ -1,0 +1,176 @@
+.fadeIn {
+    animation-name: fadeInAnime;
+    animation-fill-mode: backwards;
+    animation-duration: 2s;
+    /* animation-iteration-count:infinite; */
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-direction: normal;
+}
+
+@keyframes fadeInAnime {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.demo02 span {
+    display: inline-block;
+    opacity: 0;
+    -webkit-animation: demo02 2s 1s;
+    animation: demo02 2s 1s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes demo02 {
+
+    0% {
+        -webkit-transform: scale(0);
+    }
+
+    10% {
+        -webkit-transform: translate(-250px, 0);
+    }
+
+    20% {
+        -webkit-transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.2, 0.8);
+    }
+
+    60% {
+        -webkit-transform: scale(0.8, 2);
+    }
+
+    70% {
+        -webkit-transform: scale(1);
+    }
+
+    80% {
+        -webkit-transform: scale(1.2, 0.8);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes demo02 {
+
+    0% {
+        transform: scale(0);
+    }
+
+    10% {
+        transform: translate(-250px, 0);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2, 0.8);
+    }
+
+    60% {
+        transform: scale(0.8, 2);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1.2, 0.8);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.fall {
+    animation-name: rakka;
+    animation-fill-mode: backwards;
+    animation-duration: 2s;
+    /* animation-iteration-count:infinite; */
+    animation-timing-function: ease;
+    animation-delay: 2.5s;
+    animation-direction: normal;
+}
+
+@keyframes rakka {
+    0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+
+.tileFadeIn{ 
+   opacity:0;
+    animation-name:sample02;
+    animation-duration:1.5s; 
+    animation-fill-mode: forwards;
+  }
+  @keyframes sample02 {
+  0% {
+   opacity: 0;
+   transform: translateX(-50px);
+  }
+
+   100% {
+    opacity: 1;
+    transform: translateX(0);
+   } 
+}
+
+.contentFadeIn{ 
+    opacity:0;
+     animation-name:sample03;
+     animation-delay: 1s;
+     animation-duration:0.5s; 
+     animation-fill-mode: forwards;
+   }
+   @keyframes sample03 {
+   0% {
+    opacity: 0;
+    transform: translateX(0);
+   }
+ 
+    100% {
+     opacity: 1;
+     transform: translateX(0);
+    } 
+ }
+
+ .headerFadeIn{ 
+    opacity:0;
+     animation-name:sample04;
+     animation-delay: 0s;
+     animation-duration:2s; 
+     animation-fill-mode: forwards;
+   }
+   @keyframes sample04 {
+   0% {
+    opacity: 0;
+    transform: translateY(-50px);
+   }
+ 
+    100% {
+     opacity: 1;
+     transform: translateY(0);
+    } 
+ }
+
+ .back{
+    animation-fill-mode: backwards;
+ }

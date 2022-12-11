@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+/* タイプセレクタ。pタグ全てに適用される */
+
+/* @media screen and (min-width: 600px) { 
+}*/
+:root{
+	font-size:16px;
+}
+
+title {
+	display: inline-block;
+	/* font-size: 60px; */
+	color: white;
+	background-color: green;
+}
+
+body {
+	counter-reset: chapter;
+	font-family: "ヒラギノ角ゴ ProN W3";
+	padding: 0.5rem;
+	background-color: white;
+
+}
+
+.bgColor{
+
+}
+
+h1 {
+	/* width: 95%; */
+	background-color: #E2EFD9;
+	margin-top: 4rem;
+	margin-bottom: 3rem;
+	/* margin-left: auto; */
+	margin-right: 1%;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	box-shadow: 0.2rem 0.2rem 0px 0 gray;
+	font-size: 1.6rem;
+	counter-reset: sub-chapter;
+	font-family: "ヒラギノ角ゴ ProN W3";
+}
+
+
+h2 {
+	border-bottom: solid 4px green;
+	font-size: 1.3rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-top: 3rem;
+	margin-bottom: 2rem;
+	font-family: "ヒラギノ角ゴ ProN W3";
+}
+
+h1::before {
+	counter-increment: chapter;
+	content: counter(chapter) ". ";
+}
+
+h2::before {
+	counter-increment: sub-chapter;
+	content: counter(chapter) "-" counter(sub-chapter) ". ";
+}
+
+h3::before {
+	counter-increment: section;
+	content: "(" counter(section) ") ";
+}
+
+p {
+	color: black;
+	font-size: 1.1rem;
+	/* padding-left: 0.5rem;
+	padding-right: 0.5rem; */
+}
+
+li {
+	color: black;
+	font-size: 1.1rem;
+	line-height: 1.5;
+}
+
+ul{
+	padding-left: 0.5rem;
+}
+
+li{
+	padding-left: 1rem;
+}
+
+.contentBox2 ol {
+	padding-left: 1rem;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+.contents{
+	/* font-size: 1.3rem; */
+	padding-left: 1rem;
+}
+
+.contentBox {
+	border: 0.2rem solid #a4a4a4;
+	background-color: #fff;
+	/* font-size: 1rem; */
+	margin: 0 auto;
+	padding-left: 0.5rem;
+	padding-right: 3%;
+}
+
+.contentBox::before {
+	color: black;
+	background-color: #fff;
+	content: "例";
+	font-weight: bold;
+	font-size: 1.5rem;
+	left: 1rem;
+	padding: 1rem;
+	position: relative;
+	top: -1.2rem;
+}
+
+.wordBox {
+	width: 92%;
+	border: 0.2rem solid #ccc;
+	margin: 0 auto;
+	padding-left: 1rem;
+	padding-right: 0.5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	border-left: 0.5rem solid #146019;
+	border-top: 0.2rem solid #D3D3D3;
+	border-bottom: 0.2rem solid #D3D3D3;
+	border-right: 0.2rem solid #D3D3D3;
+	font-size:1.3rem;
+	font-weight: bold;
+}
+
+.keyWordBox {
+	font-size: 2rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	line-height: 1.5;
+	width: 35%;
+
+}
+
+.detailBox {
+	/* font-size: 35px; */
+	line-height: 1.5;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0px;
+	width: 70%;
+
+}
+
+
+.mmBox {
+	/* font-size: 35px; */
+	line-height: 1.5;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0px;
+	width: 60%;
+}
+
+
+.box {
+	width: 95%;
+	border: solid 4px green;
+	background-color: #ffffff;
+	margin: 0 1% 0 1%;
+}
+
+.step li {
+	list-style-type: none;
+	counter-increment: count;
+}
+
+.step li::before {
+	content: counter(count)". ";
+}
+
+.step-child li {
+	list-style-type: none;
+	counter-increment: cnt;
+	margin-left: 0.1rem;
+}
+
+.step-child li::before {
+	content: counter(count)"-" counter(cnt)". ";
+}
+
+.that {
+	color: solid #D3D3D3;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.that td {
+	/* font-size: 35px; */
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 50%;
+}
+
+.that th {
+	/* font-size: 35px; */
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: normal;
+	text-align: left;
+	width: 50%;
+}
+
+.example {
+	color: solid #D3D3D3;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.example td {
+	font-size: 1rem;
+	padding-top: 2%;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 30%;
+}
+
+.example th {
+	font-size: 1rem;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 70%;
+	font-weight: normal;
+	text-align: left;
+}
+
+
+th,td {
+	border: solid 0.05rem #333;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.contentBox2 {
+	background-color: #fbf9f9;
+	margin: auto 0;
+	line-height: 1.5;
+	padding:0%;
+	padding-bottom: 1rem;
+	border-left: 0.5rem double #146019;
+	border-top: 4px solid #D3D3D3;
+	border-bottom: 4px solid #D3D3D3;
+	border-right: 4px solid #D3D3D3;
+}
+
+.contentBox2 li {
+	font-size: 1rem;
+}
+
+
+
+.chip {
+	border-bottom: dotted 2px #c0c0c0;
+}
+
+.tippy-box[data-theme~='tomato'] {
+	/* placement: 'right', */
+	border: solid #D3D3D3;
+	background-color: #F8F8FF;
+	color: black;
+	/* font-size: 30px; */
+	padding-left: 20px;
+	padding-right: 20px;
+}

@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ポジションについて</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+</head>
+
+
+<body tabindex="0">
+  <!-- <title>ポジションとは？</title> -->
+
+  <div class="contentBox2">
+    <p class="contents">目次</p>
+    <ol class="step">
+      <li><a href="#1">ポジションについて</a></li>
+      <li><a href="#2">ポジションの優劣</a></li>
+      <li><a href="#3">まとめ</a></li>
+    </ol>
+    <br>
+  </div>
+  <h1 id ="1">ポジションについて</h1>
+  <p>
+  <b>ポジション</b>はプレイヤーがテーブルに着く位置のことです。
+  <br>
+  <br>
+  <br>
+  6人でポーカーをした場合の各ポジションの名称は以下の通りになります。<br>
+  <br>
+    <div style="text-align: center">
+    <img src="position_images/1.png" width=100%>
+  </div>
+    <br>
+    <br>
+    <br>
+    <table border class="example">
+       <tr align="left">
+        <td  style="font-weight: bold">ポジション名</td>
+        <th  style="font-weight: bold">内容</th>
+      </tr>
+     <tr>
+      <td><b>SB</b></td>
+      <th>ボタンの左側で強制参加費を支払うポジション</th>
+    </tr>
+       <tr>
+         <td><b>BB</b></td>
+         <th>SBの左側で強制参加費を支払うポジション</th>
+       </tr>
+       <tr>
+         <td><b>UTG</b></td>
+         <th>プリフロップで、最初にアクションを行うポジション</th>
+       </tr>
+       <tr>
+         <td><b>HJ</b></td>
+         <th>UTGの次にアクションをするポジション</th>
+       </tr>
+       <tr>
+         <td><b>CO</b></td>
+         <th>HJの次にアクションをするポジション</th>
+       </tr>
+       <tr>
+         <td><b>BTN</b></td>
+         <th>COの次にアクションするポジション</COde></th>
+       </tr>
+     </table>
+     <br>
+     <br>
+   </div>
+  <h1 id="2">ポジションの優劣</h1>
+  <p>
+  <b>ポジションはポーカーをプレーする上で、とても重要です。</b><br>
+  <br>
+      ポーカーは、そもそも情報が不十分な中戦うゲームなので、相手から得られる情報はとても貴重なのです。<br>
+      そのため、相手のアクションを見てから判断できるポジションの方が有利になり、これをインポジション(IP)と呼びます。<br>
+      逆に、先にアクションをするポジションをアウトオブポジション(OOP)と呼びます。
+      <br>
+  <br>
+  <br>
+  次に、アクションの順番を見てみましょう。
+    <br><br>
+    プリフロップのアクションの順番は、<br>
+    <b>UTG >> HJ >> CO >> BTN >> SB >> BB</b><br>
+    <br>
+    フロップ・ターン・リバーのアクションの順番は、<br>
+    <b>SB >> BB >> UTG >> HJ >> CO >> BTN</b><br>
+    <br>
+    <br>
+    つまり、プリフロップでは、
+    <span class="chip" id="test3"><b>UTG</span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test3', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'プリフロップで、最初にアクションを行うプレーヤーのこと',
+      });
+    </script>
+    が1番弱いポジション</b></font>になります。<br>
+    フロップ・ターン・リバーでは、
+    <span class="chip" id="test4"><b>SB</span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test4', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'ボタンの左側で、BBが払った強制参加費の半分支払うポジションのこと',
+      });
+    </script>
+    が1番弱いポジション</b>となります。<br>
+    1番最後にアクションをするのはBTNなので、
+    <span class="chip" id="test5"><b>BTN</span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test5', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'プリフロップ以降に1番最後にアクションをするポジションのこと',
+      });
+    </script>
+    が最も強いポジション</b>となります。<br>
+    <br>
+    <br>
+    <div style="text-align: center">
+    <img src="position_images/2.png" width=100%>
+  </div>
+  <br>
+  <br>
+  <p>
+  <b>なるべく強いポジションで参加して、悪いポジションではできるだけ参加をしないこと</b>が重要になります。<br>
+  </div>
+  <br>
+  <br>
+  <p>
+  それでは、具体例を見てみましょう。
+  <br>
+  <br>
+  <div class="contentBox">
+  <br>
+  <br>
+  <div style="text-align: center">
+  <img src="position_images/3.png" width=95%>
+ </div>
+  <br>
+
+  <p>
+    例えば、あなたはBTNです。<br>
+    プリフロップで、COからのレイズにコールして、参加しました。フロップが開いたあとに、COがチェックしたとします。<br>
+  <p>
+    <br>
+    この時点で<br>
+    <br>
+      <b>CO目線</b><br>
+      ・BTNはプリフロップでコール<br>
+    <br>
+      <b>BTN目線</b><br>
+      ・COはプリフロップでレイズ<br>
+      ・COはフロップでチェック<br>
+  <br>
+  <p>
+    という<b>情報量の偏りがある状態</b>で、BTNはアクションすることができるのです。<br>
+    この偏りは、プリフロップからリバーまで続くので、<b>ポジションが後ろであることが物凄く有利であること</b>が分かります。
+    <br>
+    <br>
+  </div>
+  <h1 id="3">まとめ</h1>
+  <p>
+  ポジションは、ポーカーをするうえで、アクションの順番が決まるので重要になります。<br>
+  後でアクションをした方が、相手のアクションを見て、有利に立ち回ることができるので、ポジションが有利な時にゲームに参加しましょう。<br>
+  </p>
+
+</body>
+</html>

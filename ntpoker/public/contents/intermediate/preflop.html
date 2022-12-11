@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>プリフロップの考え方(中級編)</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+</head>
+
+
+<body>
+  <!-- <title>プリフロップの考え方(中級編)</title> -->
+  <div class="contentBox2">
+    <p class="contents">目次</p>
+    <ol class="step">
+      <li><a href="#1">プリフロップの考え方</a></li>
+      <li><a href="#3">プリフロップレンジ表の見方</a></li>
+      <ol class="step-child">
+        <li><a href="#5">Open Raise</a></li>
+        <li><a href="#6">Fancing a Raise</a></li>
+        <li><a href="#7">Fancing a 3Bet</a></li>
+      </ol>
+      <li><a href="#8">スクイーズとレイズサイズについて</a></li>
+      <ol class="step-child">
+        <li><a href="#9">スクイーズ</a></li>
+        <li><a href="#10">レイズサイズ</a></li>
+      </ol>
+      <li><a href="#11">まとめ</a></li>
+    </ol>
+    <br>
+  </div>
+  <h1 id ="1">プリフロップの考え方</h1>
+  <p><b>プリフロップ</b>はカードが２枚配られて、コミュニティカードが見えていない状態のことです。<br>
+    <br>
+    コミュニティカードがオープンされていないということはプレイヤーが得られる情報量、起こりうる状況が限定的であり、プレーの仕方を覚えてしまえば機械的に行うことができ、周りと差をつけることができます。<br>
+    ハンドには強さがあり、どのハンドでも参加していいわけではありません。<br>
+  <br>
+    プリフロップ時に行うアクションは、3つあります。<br>
+  <br>
+    <b>・レイズ</b><br>
+    <br>
+    <b>・コール</b></b><br>
+    <br>
+    <b>・フォールド</b><br>
+  </div>
+  <p>
+    プリフロップでは以下のような基準に基づき、アクションが決定されます。<br>
+  </br>
+      <b>・自分のハンド</b><br>
+      <br>
+      <b>・各プレーヤーのアクション</b><br>
+      <br>
+      <b>・各プレーヤーのポジション</b><br>
+      <br>
+      <b>・スタック補足</b><br>
+    </div>
+    <br>
+    以上の情報しかなく、実はプリフロップのアクションについて、近似的な最適解はわかっています。
+    とはいえ、その最適解を人間が完全に覚えて再現するのは現実的ではありません。<br>
+    <br>そこで、その最適解を人間が表現できるレベルにまで簡素化された表（プリフロップレンジ表）を用いて実際のプレーを行います。簡素化するにあたり、一般的にはプレーヤーのレベルやプレーのしやすさなどが考慮されます。<br>
+    <br>
+    本章で紹介するプリフロップレンジ表は以下の観点から作成されています。
+    <br>
+    <br>
+    <b>・プリフロップの覚えやすさ</b><br>
+    <br>
+    <b>・フロップ以降のプレーのしやすさ</b><br>
+  </div>
+  <br>
+    プリフロップレンジ表(中級編)は<a href="range2.html">こちら</a>
+  
+
+  <h1 id ="3">プリフロップレンジ表の見方</h1>
+  <p>
+    プリフロップレンジ表の見方とアクションを説明します。<br>
+  </p>
+  <h2 id="5">Open Raise</h2>
+  <div style="text-align: center">
+    <img src="pre_flop_images/2.png" width=80%>
+    </div>
+    <br>
+    <p>
+      <br>
+    これは、プリフロップの
+    <span class="chip" id="test42">オープンレンジ</span>
+      <script>
+        // With the above scripts loaded, you can call `tippy()` with a CSS
+        // selector and a `content` prop:
+        tippy('#test42', {
+            placement: 'top',
+            theme: 'tomato',
+            content:'誰もレイズしていない状況で自分がレイズして参加するハンドレンジ',
+        });
+       </script>
+    になります。それぞれのポジションからのレイズで参加するハンドを色で示しています。<br>
+    <br>
+    例えば、あなたのポジションがUTGなら緑に塗られている所がレイズで参加するハンドです。
+    COのオープンレンジは緑と黄色と薄い黄色です。<br>
+    色が半分しか塗られていない場合は、50%の頻度で
+    <span class="chip" id="test43">オープンレイズ</span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test43', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'誰もレイズしていない状況でのレイズのこと',
+      });
+     </script>
+    することを意味します。
+    <br>
+  </p>
+  <h2 id="6">Facing a Raise</h2>
+  <br>
+    <div style="text-align: center">
+    <img src="pre_flop_images/3.png" width=80%>
+    </div>
+    <br>
+    <p>
+    <br>
+    この表はプリフロップで、他のプレーヤーのオープンレイズに対するアクションを示しており、赤なら3BET、緑ならコール、白ならフォールドになります。<br>
+    左側があなたのポジション、上側(VS ??)がオープンレイズした人のポジションを表しています。<br><br>
+    上記の表はあなたがBBにいるときに、SBがレイズしてきた場合のアクションを示しています。<br>
+
+    <br>
+  </p>
+  <h2 id="7">Facing a 3Bet</h2>
+  <div style="text-align: center">
+    <img src="pre_flop_images/4.png" width=80%>
+    </div>
+    <br>
+    <br>
+    <p>
+    この表はプリフロップで、自分のオープンレイズ
+    に対して3BETされた場合のアクションを示しており、赤なら4BET、緑ならコール、白ならフォールドになります。<br>
+    左側があなたのポジション、上側(VS ??)がオープンレイズした人のポジションを表しています。<br>
+    <br>
+    上記の表はあなたがBTNでオープンレイズしたときに、SBかBBのどちらかが3BETしてきた場合のアクションを示しています。<br>
+  </p>
+
+  <h1 id ="8">スクイーズとレイズサイズについて</h1>
+  <p><b>スクイーズ</b>はプリフロップで誰かのオープンレイズに１人以上コールしている場合に、大きなリレイズ（3Bet）することで他プレーヤーを降ろしポットを獲得することを目的としたベットです。
+  </div>
+  <p>
+  <br>
+  具体例を見てスクイーズについて考えてみます。
+  <br>
+  <br>
+  <div class="contentBox">
+    <br>
+    <p>
+    <b>プリフロップ</b>
+    <div style="text-align: center">
+    <img src="pre_flop_images/1.png" width=100%>
+    </div>
+    <p>
+      <br>
+    プリフロップで、あなたはBTNとします。<br>
+    HJがレイズ600で参加して、COがコール600しました。<br>ここで、あなたは<span style="color:black;" >♠K♠Q</span>でスクイーズ2400をしました。<br>
+    結果は、相手1と相手2はフォールドして、見事ポットを獲得できました。<br>
+
+    <br>
+    <b>・HJ：オリジナルレイザーの目線</b><br>
+    <br>
+    HJは、後ろに2人のプレイヤーがいて、自分のレイズにコール、リレイズされています。<br>
+    なので、HJは後ろの2人のハンドを気にして、
+    <span class="chip" id="test44">ハンドレンジ</span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test44', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'あるプレイヤーが持ち得るであろうハンドの組み合わせ',
+      });
+     </script>
+    をタイトにする必要があるので、フォールドになることが多くなります。<br>
+    もし、ここでHJがリレイズに対してコール、または4BETしてきた場合は強いハンドであることが想定されます。<br>
+    <br>
+    <b>・CO：レイズをコールしたプレイヤーの目線</b><br>
+    <br>
+    このコールしたプレイヤーがリレイズに耐えられるハンドを持っている可能性はかなり低いです。<br>
+    あなたの3BETに対してコール、リレイズできるハンドを持っていたら、既にオープンレイズに対してレイズ(3BET)をしている可能性が高いからです。<br>
+    そのため、多くのハンドをフォールドすることになります。<br>
+    <br>
+    <br>
+    <b>スクイーズの注意点</b><br>
+    <br>
+    ・
+    <span class="chip" id="test46">コーラー</span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test46', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'コールしたプレーヤー',
+      });
+     </script>
+    が多い場合はスクイーズが成功する確率が下がります。スクイーズするハンドレンジを狭くするのが良いでしょう。<br>
+    <br>
+    ・オリジナルレイザーが
+    <span class="chip" id="test47">タイト</span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test47', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'ハンドが固い人',
+      });
+     </script>
+    なプレイヤーなら、相手のハンドレンジが強いため、スクイーズするハンドレンジを狭くしましょう。
+  </p>
+  <br>
+  </div>
+
+  <h2 id="10">レイズサイズ</h2>
+  <p>
+    レイズサイズは、自分のハンドレンジや相手のハンドレンジになどよって決まりますが、以下を目安にしてください。<br>
+    <br>
+    <b>・オープンレイズ</b><br>
+    <b>2.5BB〜3BB</b>でオープンレイズ<br>
+    <br>
+    <b>・3Bet</b><br>
+    「あなたが
+    <span class="chip" id="test110">IP</span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test110', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'インポジションとも言い、アクションを後にすること',
+      });
+     </script>
+    」- 相手のオープンレイズの<b>3〜3.5倍</b><br>
+    <br>
+    「あなたが
+    <span class="chip" id="test111">OOP</span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test111', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'アウトポジションとも言い、アクションを先にすること',
+      });
+     </script>
+    」- 相手のオープンレイズの<b>4〜4.5倍</b><br>
+    <br>
+    <b>・4Bet</b><br>
+    「あなたがIP」- 相手の3Betの<b>2.5〜2.7倍</b><br>
+    <br>
+    「あなたがOOP」- 相手の3Betの<b>2.7〜3倍</b><br>
+    <br>
+    <b>・スクイーズ</b><br>
+    オープンレイズに対するコーラー１人につき、３Betのレイズサイズから１倍あげる。<br>
+    例えば、「あなたがOOP」でコーラーが１人なら、相手のオープンレイズの<b>5〜5.5倍</b><br>
+    
+  <h1 id ="11">まとめ</h1>
+  <p>
+    本章ではプリフロップの考え方とアクションについて解説しました。</br>
+    プリフロップのアクションを最適化することで、損失を最小限に抑え、利益を最大限獲得することができます。</br>
+    そのためには、以下の点に注意してプレーしましょう。</br>
+    <br>
+    ・プリフロップのハンドレンジをしっかり見ながらプレー、もしくは暗記する。<br>
+    <br>
+    ・相手のアクションからハンドレンジを想定する。</br>
+    <br>
+    ・相手の傾向を掴み、柔軟なプレーを心掛ける。</br>
+
+  </p>
+</body>
+</html>

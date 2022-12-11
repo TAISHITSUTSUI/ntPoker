@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>バランシング</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+</head>
+
+
+<body>
+  <br>
+  <div class="contentBox2">
+    <p class="contents">目次</p>
+    <ol class="step">
+      <li><a href="#1">バランシングとは</a></li>
+      <li><a href="#2">バランシングをする目的</a></li>
+      <li><a href="#3">具体例</a></li>
+      <ol class="step-child">
+        <li><a href="#4">ベットのバランシング</a></li>
+        <li><a href="#5">チェックのバランシング</a></li>
+      </ol>
+      <li><a href="#6">まとめ</a></li>
+    </ol>
+    <br>
+  </div>
+  <h1 id="1">バランシングとは</h1>
+  <p><b>バランシング</b>はバランスを取る、バランスすること。ポーカーをプレーする上で必要不可欠な概念の一つです。<br><br>
+    <br>
+    バランシングを一言で表すと「<b>あるアクションに様々なハンドを混ぜること</b>」と表現できます。あなたのアクションに様々なハンドが混ざっていると、相手はあなたのアクションから
+    <span class="chip" id="test80"><b>ハンドレンジ</b></span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test80', {
+        placement: 'top',
+        theme: 'tomato',
+        content: 'あるプレイヤーが持ち得るであろうハンドの組み合わせのこと',
+      });
+    </script>
+    を推測することが難しくなります。<br>
+    <br>
+    つまりバランシングは、 <b>特定のスポットに限らずプレー全体を通して意識しておくこと</b>で、初めて効果が発揮されます。<br>
+    <br>
+    本章ではバランシングの目的や具体的にどのようにバランシングを行うかについて解説していきます。
+  <h1 id="2">バランシングをする目的</h1>
+  <p>
+    「<b>あなたのアクションから想定されるハンドレンジを幅広く維持し、相手にハンドを読ませないようにする</b>」ことが、バランシングの<b>
+      最大の目的</b>です。<br>
+    これは相手があなたのハンドレンジを考えながらプレーしてくる場合、特に有効です。<br>
+    <br>
+    <br>
+    例えば、あなたは常に強いハンドのみでベット（
+    <span class="chip" id="test81">バリューベット</span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test81', {
+        placement: 'top',
+        theme: 'tomato',
+        content: '相手より強いハンドを持っている時に、獲得できるチップの量を最大化することを目的としたベット',
+      });
+    </script>
+    ）していたとしましょう。もし相手がそれに気づいた場合、相手はあなたのベットに対して多くのハンドをフォールドすることで、あなたに取られるはずであったチップを守ることができます。<br>
+    <br>
+    逆に、あなたは弱いハンドでは常にチェックし、相手のベットにフォールドしていたとしましょう。もし相手がそれに気づいた場合、相手はあなたのチェックに対して多くのハンドでブラフすることで、ポットを奪いにくるでしょう。<br>
+    <br>
+    このような相手に対しては<b>バランシング</b>することで、あなたのハンドレンジを読みにくくし、相手に難しい判断を迫ることが有効です。<br>
+    <br>
+    <br>
+    それでは、実際に具体例をみていきましょう。<br>
+  </p>
+  <h1 id="3">具体例</h2>
+    <h2 id="4">ベットのバランシング</h2>
+    <div class="contentBox">
+      <p>
+        プリフロップであなたはBTNからとあるハンドでレイズ600で参加し、BBにコールされました。状況は以下の通りです。<br>
+        <br>
+        <br>
+        <b>プリフロップ</b>
+      <div style="text-align: center">
+        <img src="Balancing_images/1.png" width=90%>
+      </div>
+      <br>
+      <div style="text-align: center">
+        <img src="cb_images/yajirushi.png" width=10%>
+      </div>
+      <p>
+        <b>フロップ</b>
+        <br>
+      <div style="text-align: center">
+        <img src="Balancing_images/2.png" width=90%>
+      </div>
+      <br>
+      <p>
+        フロップで相手はチェックしてきました。<br>
+        <br>
+        ここであなたはどのようなハンドでCBを行うべきでしょうか？<br>
+        <br>
+        バリューベットとしては、AAやKKのようなオーバーペアやAQやKQのようなトップヒット、さらには33のようなセットは十分に強く、バリューベットができそうです。<br>
+        <br>
+        一方で、ブラフベットはどうでしょうか？<br>
+        <br>
+        4や6が引ければストレートが完成する65や54、また<b><span style="color:red;">❤</span></b>が引ければフラッシュが完成する<b><span
+            style="color:red;">9❤8❤</span></b>等はブラフベットができそうです。<br>
+        <br>
+        ・
+        <span class="chip" id="test82"><b>バリューハンド</b></span>
+        <script>
+          // With the above scripts loaded, you can call `tippy()` with a CSS
+          // selector and a `content` prop:
+          tippy('#test82', {
+            placement: 'top',
+            theme: 'tomato',
+            content: '相手のハンドレンジの多くに勝っているハンド',
+          });
+        </script>
+        <br>
+        セット(QQ、77、33)、ツーペア(Q7sなど)、AA、KK、Qのワンペアなど<br><br>
+        ・
+        <span class="chip" id="test83"><b>ブラフハンド</b></span>
+        <script>
+          // With the above scripts loaded, you can call `tippy()` with a CSS
+          // selector and a `content` prop:
+          tippy('#test83', {
+            placement: 'top',
+            theme: 'tomato',
+            content: '相手のハンドレンジの多くに負けているハンド',
+          });
+        </script>
+        <br>
+        ストレートドロー(65s、64s、54sなど)、<b><span style="color:red;">❤</span></b>のフラッシュドロー
+        <br>
+        <br>
+    </div>
+    <br>
+    </div>
+    <br>
+    <p>
+      これらのバリューハンド、ブラフハンドでバランスよくCBをしていくことで、あなたのフロップのベットがバリューなのかブラフなのかを相手に特定されづらくなります。<br>
+      <br>
+      もし、あなたがブラフハンドでほとんどベットしていないとするとあなたのベットレンジは強くなり、相手はあなたのバリューベットに対して簡単にフォールドすることができます。<br>
+      その結果、バリューベットにコールをもらい、バリューを取ることが難しくなります。<br>
+      <br>
+      一方で、あなたがブラフハンドで多くの場合にベットをしていたとするとあなたのベットレンジは弱くなり、相手はあなたのベットに対してコールをすることが多くなります。<br>
+      これはバリューベットにもコールをもらえるようになる一方で、多くのブラフベットにコールされてしまうことになります。<br>
+      <br>
+      <br>
+      ベットサイズにもよりますが、一般的にベットするハンドは<b>60～70％</b>の頻度でバリューハンドを、<b>30～40％</b>の頻度でブラフハンドを混ぜると適正値と言われています。<br>
+    <h2 id="5">チェックのバランシング</h2>
+    <p>
+    <div class="contentBox">
+      <br>
+      <p>
+        フロップのあなたのベットに対してBBはコールし、ターンは次のような状況になりました。<br>
+        <br>
+        <br>
+        <b>フロップ</b>
+      <div style="text-align: center">
+        <img src="Balancing_images/3.png" width=90%>
+      </div>
+      <br>
+      <div style="text-align: center">
+        <img src="cb_images/yajirushi.png" width=10%>
+      </div>
+      <p>
+        <b>ターン</b><br>
+      <div style="text-align: center">
+        <img src="Balancing_images/4.png" width=90%>
+      </div>
+      <br>
+      <br>
+      <p>
+        ターンで相手はチェックしてきました。ここであなたはどのようなハンドでチェックを行うべきでしょうか？<br>
+        <br>
+        先に説明した通り、<b>バランシングはベットする場合だけではなく、チェックする場合にも取り入れる必要</b>があります。<br>
+        <br>
+        あなたがQヒットや、それ以上に強いハンドで毎回ベットしてしまうと、あなたのチェックレンジはかなり弱くなってしまい、相手はあなたのチェックレンジに対してＱヒット以上が無いことを推測できます。<br>
+        相手はあなたのチェックレンジが弱いことが分かっているので、簡単にバリューベット、ブラフベットを打つことができます。<br>
+        <br>
+        <br>
+        そのため、あえて強いハンドもチェックレンジに取り入れることで、相手にレンジを読ませず難しい判断を迫ることができます。<br>
+        <br>
+        もしあなたがこの状況でトップヒットを持っていたとしたら、どのようなアクションをどれくらいの頻度で行うべきでしょうか？<br>
+        <br>
+        目安ですが、以下の割合が適正値となります。<br>
+
+        <br>
+        <b>・弱いキッカーの場合(Q6、Q8など)</b><br>
+        <b>5割程度</b>ベットする<br>
+          <br>
+          <b>・強いキッカーの場合(AQ、 KQなど)</b><br>
+          <b>８〜９割程度</b>ベットする<br>
+        <br>
+        <br>この割合を継続することで、結果としてあなたのチェックレンジの1割から2割程度にトップヒットがあることになり、<b>チェックレンジを守ること</b>ができます。<br>
+        <br>
+    </div>
+    <h1 id="6">まとめ</h1>
+    <p>
+      本章ではバランシングの目的や使い方について解説しました。<br>
+      <br>
+      バランシングはプリフロップからリバーまで、全てのストリートで考慮する必要があり、ポーカーの本質と言っても過言ではありません。<br>
+      <br>
+      実際にアクションを行う時、バリューベットをする際には「<b>ブラフだったらどんなハンドでベットしていたか</b>」、ブラフベットをする際には「<b>バリューだったらどんなハンドでベットできたか</b>」を考えることで、バランシングは一気に上達します。<br>
+      <br>
+      相手に簡単な判断をさせないためにも、バランシングを心がけていきましょう。
+
+    </p>
+
+</body>
+
+</html>

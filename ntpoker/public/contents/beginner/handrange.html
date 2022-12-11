@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>プリフロップについて</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+</head>
+
+<body tabindex="0">
+  <!-- <title>プリフロップの考え方</title> -->
+
+  <div class="contentBox2 contentBox2_test">
+  <p class="contents">目次</p>
+    <ul class="step">
+      <li><a href="#1">プリフロップ</a></li>
+      <ul class="step-child">
+        <li><a href="#7">プリフロップとは</a></li>
+        <li><a href="#8">プリフロップの考え方</a></li>
+      </ul>
+      <li><a href="#2">プリフロップレンジ表</a><br></li>
+      <li><a href="#3">プリフロップレンジ表の使い方</a></li>
+      <ul class="step-child">
+        <li><a href="#4">自分までフォールドで回ってきたら？</a></li>
+        <li><a href="#5">相手からレイズが来た場合</a></li>
+        <li><a href="#6">例外パターン</a></li>
+      </ul>
+      <li><a href="#4">まとめ</a></li>
+    </ul>
+    <br>
+  </div>
+
+
+  <h1 id="1">プリフロップ</h1>
+  <h2 id="7">プリフロップとは</h2>
+  <p><b>プリフロップ</b>はカードが2枚配られて、コミュニティカードが見えていない状態のことです。<br>
+    <br>
+    プリフロップでは、配られた2枚のカードだけで、どういったアクションを取ることが最適であるのかを判断します。<br>
+</p>
+
+    <h2 id="8">プリフロップの考え方</h2>
+  <p>
+    プリフロップでは、「<b>配られた2枚のカードで勝負に参加するか</b>」「<b>参加するのであれば、どのように参加するのか（
+     <span class="chip" id="test2">コール</span>
+     <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test2', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'相手の差し出した金額で勝負をすること',
+      });
+      </script>
+      or
+      <span class="chip" id="test3">レイズ</span>
+      <script>
+        // With the above scripts loaded, you can call `tippy()` with a CSS
+        // selector and a `content` prop:
+        tippy('#test3', {
+            placement: 'top',
+            theme: 'tomato',
+            content:'相手の差し出した金額よりも大きな金額で勝負をする場合にチップを多めに出すこと',
+        });
+       </script>
+      ）</b>」ということを考えます。<br>
+      <br>
+
+      ポーカーを始めたばかりの人は、どんなハンドでもプレーしてしまったり、とても強くないとプレーしないという極端なケースが多いです。
+      <br>
+      <br>
+      では、どのようなハンドで参加していくのか？<br>
+      <br>
+      これは、自分や相手の
+      <span class="chip" id="test4">ポジション</span>
+      <script>
+        // With the above scripts loaded, you can call `tippy()` with a CSS
+        // selector and a `content` prop:
+        tippy('#test4', {
+            placement: 'top',
+            theme: 'tomato',
+            content:'プレイヤーがテーブルに着く位置のこと',
+        });
+       </script>、すなわちアクションの順番によって大きく変わります。<br>
+
+      例えばA4oは、UTGからはフォールドなのに対して、BTNからはレイズで参加できます。<br>
+      有利なポジションではハンドが弱くても戦いやすいため、より多くのハンドで参加できます。<br>
+      <br>
+      <br>
+      プリフロップにおけるアクションを具体的にまとめたものを<b>プリフロップレンジ表</b>と呼びます。<br>
+    </p>
+    <h1 id="2">プリフロップレンジ表</h1>
+
+    <p>
+      プリフロップレンジ表を見ると「<b>どのポジションから、どういったアクションを取れば良いか</b>」がわかります。<br>
+      <br>
+      全部覚えるとなると、かなり大変ですが、最初は、<b>この表を見ながらプレイしましょう。</b><br>
+      <br>
+      「<b>XXo</b>」はオフスーツを表し、マークが揃っていないことを表します。<br>
+      「<b>XXs</b>」はスーテッドを表し、マークが揃っていることを表します。<br>
+      <br>
+      <br>
+      <div style="text-align: center">
+      <img id="handrange" src="handrange_images/1.png" width=90%>
+      </div>
+      <br>
+      <p>
+      ※初心者向けに通常よりも狭いレンジを採用しています。<br>
+      この表では、ハンドの強さを確認することができます。ハンドの強さとポジションからアクションを決定しましょう。
+    </p>
+    <h1 id="3">プリフロップレンジ表の使い方</h1>
+
+
+    <h2 id="4">自分までフォールドで回ってきたら？</h2>
+    <p>
+      自分までフォールドで回ってきた場合、「レイズ」、「フォールド」のどちらかにしましょう。<br>
+      コールで参加することは利益的でないということがわかっています。<br>
+      <br>
+      <br>
+      自分のハンドが、ポジションの色以上の強さなら、レイズで参加しましょう。<br>
+      <br>
+      例えば、自分がCOなら、薄い黄色以上のハンドは、すべてレイズで参加。<br>
+      UTGだったら黄緑、緑、赤はレイズで参加。<br>
+      <br>
+      レイズ額は、BBの<b>2.5〜3倍</b>くらいが一般的です。
+      ＳＢは自分までレイズがこなかったら、ＢＴＮと同じハンドでレイズしましょう。
+    </p>
+
+    <h2 id="5">相手からレイズが来た場合</h2>
+    <p>
+      レイズした人のポジションを確認して、自分のハンドとレイズした人のポジションを見比べましょう。<br>
+      <br>
+      自分のハンドがレイズした人のポジションよりも、1個上ならコール、2個以上上ならさらにレイズ。同じか下だったらフォールド。<br>
+      つまり、ＵＴＧからのレイズに対しては、あなたが持っているハンドが黄緑ならフォールド、緑ならコール、赤ならレイズになります。<br>
+      <br>
+      ここでのレイズ額は、先にレイズした人の<b>3〜4倍</b>が一般的です。<br>
+      <br>
+      <br>
+      ここで問題です。全部で3つ問題があります。<br>
+      上の表を参考にして考えてください。<br>
+      <br>
+      <br>
+       <div class="contentBox">
+        <p>
+        <b>問題1</b><br>
+        <div style="text-align: center">
+        <img src="handrange_images/2.png" width=95%>
+        </div>
+        <br>
+        <br>
+        <p>
+        あなたはBTNにいるとします。HJからレイズ600で、あなたのアクションが回ってきました。この時にあなたは <b>♠7 <span style="color:blue;">♦7</span></b>を持っています。あなたはどのアクション（コール・レイズ・フォールド）を行えば良いでしょうか？<br>
+        <br>
+        <br>
+        <span style="font-size: 70px; text-align:center;">
+        答えは↓</span>
+        <br>
+        <br>
+        <br>
+        <b>コール</b>です。<br>
+        上の表を見てみると、<b>♠7 <span style="color:blue;">♦7</span></b>は黄緑で、HJのハンド（黄色）の1個上になるのでコールが良さそうです。<br>
+        <br>
+        <br>
+        <br>
+        <p>
+        次の問題に行きましょう。<br>
+        <br>
+        <br>
+        <b>問題2</b><br>
+        <div style="text-align: center">
+        <img src="handrange_images/3.png" width=100%>
+        </div>
+        <br>
+        <p>
+        <br>
+        今度は、あなたがCOにいるとします。HJからレイズ600で、あなたのアクションが回ってきました。この時にあなたは<b>♠J ♠7</b>を持っています。あなたはどのアクション（コール・レイズ・フォールド）を行えば良いでしょうか？<br>
+        <br>
+        <br>
+        <span style="font-size: 70px; text-align:center;">
+        答えは↓</span>
+        <br>
+        <br>
+        <br>
+        <b>フォールド</b>です。<br>
+        上の表を見てみると、<b>♠J♠7</b>は白で、HJのハンド（黄色）の2個下なのでフォールドが良さそうです。<br>
+        <br>
+        <br>
+        <br>
+        最後の問題です。<br>
+        <br>
+        <br>
+        <b>問題3</b><br>
+        <div style="text-align: center">
+        <img src="handrange_images/4.png" width=95%>
+        </div>
+        <br>
+        <br>
+        <p>
+        今度は、あなたがHJにいるとします。UTGの人からレイズ600で、あなたのアクションが回ってきました。この時に、あなたは<b>♠A <span style="color:green;">♣K</span></b>を持っています。あなたは、どのアクション（コール・レイズ・フォールド）を行えば良いでしょうか？<br>
+        <br>
+        <br>
+        <span style="font-size: 70px; text-align:center;">答えは↓</span>
+        <br>
+        <br>
+        <br>
+        <br>
+        <b>レイズ</b>です。<br>
+        上の表を見てみると、<b>♠A <span style="color:green;">♣K</span></b>はすごく強いハンドで、どのポジションからでもレイズで入れます。<br>
+        この場合だと、UTGのレイズ600に対して、その賭け額の3倍の1800にレイズします。<br>
+        <br>
+        </div>
+
+      <br>
+      <h2 id="6">例外パターン</h2>
+      <p>
+        あなたがＳＢかＢＢだったら上記は例外です。相手のポジションは考えずに<b>ＳＢは基本的にコールしません。</b><br>
+        なぜかというと、ポジションが悪く、毎回先にアクションを行わないといけないので、不利になってしまうからです。<br>
+        <br>
+        SBは、濃い緑以上ならレイズ、それ以外はすべてフォールドになります。<br>
+        BBは、薄いグレ―以上でコール。濃い緑上ならレイズ。かなりコールできます。<br>
+        <br>
+        <br>
+        <br>
+        ここで以下の2つ問題を見てみましょう。<br>
+        <a href="#handrange">上の表</a>を参考にして考えてください。<br>
+        <br>
+        <div class="contentBox">
+          <p>
+            <b>問題1</b><br>
+            <div style="text-align: center">
+            <img src="handrange_images/5.png" width=95%>
+            </div>
+            <br>
+            <p>
+            あなたがSBにいるとします。UTGからレイズ600で、あなたのアクションが回ってきました。この時に、あなたは<span style="color:red;">❤5</span> <span style="color:green;">♣5</span>を持っています。あなたはどのアクション（コール・レイズ・フォールド）を行えば良いでしょうか？<br>
+            <br>
+            <br>
+            <span style="font-size: 70px; text-align:center;">答えは↓</span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <b>フォールド</b>です。<br>
+            <b>SBからは基本的にコールをしません。</b><br>
+            <a href="#handrange">上の表</a>を見てみると、<b><span style="color:red;">❤5</span> <span style="color:green;">♣5</span></b>は黄色であり、濃い緑以上ではないのでフォールドが良さそうです。<br>
+            <br>
+            <br>
+            <br>
+            <b>問題2</b><br>
+            <div style="text-align: center">
+            <img src="handrange_images/6.png" width=95%>
+            </div>
+            <br>
+            <br>
+            <p>
+            あなたがBBにいるとします。BTNからレイズ600で、あなたのアクションが回ってきました。この時に、あなたは<b><span style="color:green;">♣7 ♣5</span></b>を持っています。あなたはどのアクション（コール・レイズ・フォールド）を行えば良いでしょうか？<br>
+            <br>
+            <br>
+            <span style="font-size: 70px; text-align:center;">答えは↓</span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <b>コール</b>です。<br>
+            BBは、<b>薄いグレー以上でコール</b>できるので、<a href="#handrange">上の表</a>を見て見ると、<b><span style="color:green;">♣7 ♣5</span></b>は薄いグレーなのでコールできます。<br>
+            <br>
+        </div>
+          <h1 id="4">まとめ</h1>
+
+          <p>
+
+          プリフロップレンジ表を覚えることで、<b>プレイミスを最小限に抑えること</b>ができます。<br>
+            このハンドレンジでプレーできるようになったら、さらにもう1ランク上のハンドレンジを覚えましょう。
+            <br>
+
+          </body>
+          </html>

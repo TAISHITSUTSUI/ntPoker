@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+
+/*ロゴの大きさを調整*/
+#logo a{
+  max-width:50%;
+  color: white;
+  text-decoration:none;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+nav{
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-color: #272422;
+}
+
+/* .nav-font{
+  font-size: 40px;
+} */
+
+.appContainer {
+  width: 100%;
+}
+
+.drawer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 70px;
+  padding: 0 1em;
+}
+
+/*ナビゲーション部分*/
+
+.menu ul li a {
+  display:block;
+  font-weight:bold;
+  padding: 2em;
+  border-bottom: 1px dotted #CCC;
+  color:#333;
+  text-decoration:none;
+  list-style:none;
+  color: white;
+}
+
+.menu ul li {
+  list-style:none;
+}
+
+.menu ul li a:hover{
+  /* background-color:rgba(0,0,0,1); */
+  background-color: #425737;
+  color:orange;
+}
+
+
+.menu{
+  display: none;
+  text-align:center;
+  background-color: rgba(49, 64, 41, 1);
+  transition: 0.5s ease;
+  /* -webkit-transform: translateX(100%); */
+  transform: translateX(100%);
+}
+
+/*OPEN時の動き*/
+.menu.open {
+  display: flex;
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);/*メニューを元の位置へ戻す*/
+
+}
+
+.menuList{
+  color: white;
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+
+.menuList .row{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.row #icon {
+  flex: 50%;
+  display: grid;
+  place-items:center;
+}
+
+.row #title {
+  flex: 50%;
+  text-align: left;
+}
+
+/*トグルボタンのスタイルを指定*/
+.Toggle {
+  display: block;
+  position: fixed;    /* bodyに対しての絶対位置指定 */
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  z-index: 100;
+  right:15px;
+}
+
+.Toggle span {
+  display: block;
+  position: absolute;
+  width: 50px;
+  border-bottom: solid 4px lightGray;
+  -webkit-transition: .35s ease-in-out;	/*変化の速度を指定*/
+  -moz-transition: .35s ease-in-out;		/*変化の速度を指定*/
+  transition: .35s ease-in-out;			/*変化の速度を指定*/
+
+}
+/*各ボーダー少しずつずらす*/
+.Toggle span:nth-child(1) {
+  top:5px;
+}
+.Toggle span:nth-child(2) {
+  top: 18px;
+}
+.Toggle span:nth-child(3) {
+  top: 32px;
+}
+
+.Toggle.active span:nth-child(1) {
+  top: 18px;
+  /* 1番目のspanをマイナス45度に */
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.Toggle.active span:nth-child(2),
+.Toggle.active span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*----------------------------------ここからPCモニターの記述-----------*/
+@media screen and (min-width: 600px) {
+
+  /*ロゴの大きさを調整*/
+
+  /* .appContainer{
+    display: flex;
+  } */
+
+  nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+  }
+  /* nav{
+    width: 200px;
+    height: 100vh;
+  } */
+
+  .Toggle{
+    display: none;
+  }
+
+  .drawer #logo {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .menu{
+    width: 100%;
+    font-size:0.9em;
+    background-color: transparent;
+    margin:0 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    display: flex;
+  }
+
+  .menuList{
+    color: white;
+    height: 70px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menuList #active {
+    background-color: #425737;
+  }
+
+  .menuList .row{
+    height: auto;
+    width: 150px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+  }
+
+  .menuList .row:hover{
+    cursor: pointer;
+    background-color: #425737;
+  }
+
+  .row #icon {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+  }
+
+  .row #title {
+    flex: 70%;
+    text-align: left;
+  }
+
+}

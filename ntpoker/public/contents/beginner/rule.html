@@ -1,0 +1,511 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"></meta>
+<title>ポーカーのルールについて</title>
+<link rel="stylesheet" href="../style.css">
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+</head>
+
+
+<body tabindex="0">
+<!-- <title>テキサスホールデムのルール</title> -->
+
+<div class="contentBox2">
+  <p class="contents">目次</p>
+<ul class="step">
+  <li><a href="#9">テキサスホールデムとは</a></li>
+  <li><a href="#10">ゲームの概要</a></li>
+  <ul class="step-child">
+    <li><a href="#1">人数と使用カード</a></li>
+    <li><a href="#12">目的</a></li>
+    <li><a href="#2">ゲームの大まかな流れ</a>
+    <!-- <li><a href="#3">ベッティングラウンドの流れ</a> -->
+    <li><a href="#13">プレイヤーが取れるアクション</a>
+  </ul>
+  <li><a href="#11">ゲームの流れ</a></li>
+  <ul class="step-child">
+    <li><a href="#14">席に着いて、ディーラーボタンを決める</a>
+    <li><a href="#15">プレイヤーの配置とブラインド</a>
+    <li><a href="#16">プリフロップ</a>
+    <li><a href="#4">フロップ</a>
+    <li><a href="#5">ターン</a>
+    <li><a href="#6">リバー</a>
+    <li><a href="#7">ショーダウン</a>
+  </ul>
+  <li><a href="#8">まとめ</a>
+</ul>
+</div>
+<h1 id="9">テキサスホールデムとは</h1>
+<p>
+ポーカー（<b>テキサスホールデム</b>）は世界中で1億人以上にプレーされている最も人気なカードゲームの一種です。<br>
+<br>
+アメリカでは知的スポーツとしての認知が広がり、優勝賞金が10億円以上にもなる世界大会が開催されるなど、世界的に人気に拍車がかかっています。<br>
+<br>
+
+この章では、初めてポーカーをする人にもわかりやすくポーカーのルールを解説します。 <br><br>
+<b>ポーカーのルールを学んで楽しくプレイしましょう。</b>
+<h1 id="10">ゲームの概要</h1>
+<p></p>
+<h2 id="1">人数と使用カード</h2>
+<table class="example">
+
+<tr >
+<td  style="font-weight: bold">人数</td>
+<th  >2～10人</th>
+</tr>
+<tr>
+<td><b>使用カード</b></td>
+<th>ジョーカーを除く52枚</th>
+</tr>
+</p>
+</table>
+<h2 id="12">目的</h2>
+<p>
+ポーカーの目的は、プレイヤー同士でチップを奪い合うことです。<br>
+お互いが賭けたチップは、
+<span class="chip" id="test6"><b>ポット</b></span>
+<script>
+  // With the above scripts loaded, you can call `tippy()` with a CSS
+  // selector and a `content` prop:
+  tippy('#test6', {
+      placement: 'top',
+      theme: 'tomato',
+      content:'全プレイヤーが出したチップの合計',
+  });
+</script>
+に集められます。<br>
+<br>
+ポットを獲得するためには、以下の2つになります。<br>
+<br>
+<b>
+・役の強さで勝つ<br>
+<br>
+・あなたがチップをかけて全員を諦めさせる<br>
+</b>
+<br>
+<br>
+ポーカーの役は、自分の手札2枚と
+<span class="chip" id="test7">コミュニティカード</span>
+<script>
+  // With the above scripts loaded, you can call `tippy()` with a CSS
+  // selector and a `content` prop:
+  tippy('#test7', {
+
+      placement: 'auto',
+      theme: 'tomato',
+      content:'プレイヤー間で共有しているカ―ドのこと',
+  });
+</script>
+の合計7枚から、5枚を使ってつくります。
+<br>役(ハンド)の強さ一覧は<a href="handStrong.html">こちら</a><br>
+</p>
+<h2 id="2">ゲームのおおまかな流れ</h2>
+<p>
+  ポーカーでは、
+  <span class="chip" id="test8">コミュニティカード</span>
+  <script>
+    // With the above scripts loaded, you can call `tippy()` with a CSS
+    // selector and a `content` prop:
+    tippy('#test8', {
+        placement: 'top',
+        theme: 'tomato',
+        content:'プレイヤー間で共有しているカ―ドのこと',
+    });
+  </script>
+が0枚、３枚、４枚、５枚と増えていきます。<br>
+コミュニティカードの枚数に応じて、ベッティングラウンドがあります。<br>
+<br>
+  そのため<b>1ゲーム</b>は、4回のベッティングラウンドによって構成されています。<br>
+  <br>
+<p style="text-align:center">
+<b>1.プリフロップ</b><br>(手札の配布、コミュニティカードが0枚)
+<br>
+<div style="text-align: center">
+<img src="donkBet_images/yajirushi.png" width=10%>
+</div>
+<p style="text-align:center">
+<b>2.フロップ</b><br>(コミュニティーカードが3枚)
+<div style="text-align: center">
+<img src="donkBet_images/yajirushi.png" width=10%>
+</div>
+<p style="text-align:center">
+<b>3.ターン</b><br>(コミュニティーカードが4枚)
+<div style="text-align: center">
+<img src="donkBet_images/yajirushi.png" width=10%>
+<p style="text-align:center">
+<b>4.リバー</b><br>(コミュニティカードが5枚)
+</div></p>
+
+
+
+<h2 id="13">プレイヤーが取れるアクション</h2>
+<p>
+<b>ベッティングラウンド</b>では各プレイヤーが順番にアクションをしていきます。</p>
+
+  <table class="example">
+  <tr>
+    <td  style="font-weight: bold">アクション名</td>
+    <th  style="font-weight: bold">内容</th>
+ </tr>
+ <tr>
+   <td><b>レイズ</b></td>
+   <th>相手の差し出した金額よりも大きな金額で勝負をしたい場合にチップを上乗せすること</th>
+ </tr>
+ <tr>
+   <td><b>コール</b></td>
+   <th>相手の差し出した金額で勝負をすること</th>
+ </tr>
+ <tr>
+   <td><b>フォールド</b></td>
+   <th>勝負を諦めること</th>
+ </tr>
+ <tr>
+   <td><b>ベット</b></td>
+   <th>好きな金額のチップを差し出して、その金額で勝負を申し込むこと</th>
+ </tr>
+ <tr>
+   <td><b>チェック</b></td>
+   <th>追加でチップを支払うことをせずに、順番を回すこと</th>
+ </tr>
+ </p>
+</table>
+<br>
+<br>
+<h1 id="11">ゲームの流れ</h1>
+<h2 id="14">席に着いて、ディーラーボタンを決める</h2>
+<div class="contentBox">
+<br>
+<div style="text-align: center">
+ <img src="rule_images/1.png" width=95%>
+</div>
+<br>
+<br>
+<p>まず最初に席に着きます。<br>
+次に
+  <span class="chip" id="test10">ディーラーボタン</span>
+  <script>
+    // With the above scripts loaded, you can call `tippy()` with a CSS
+    // selector and a `content` prop:
+    tippy('#test10', {
+        placement: 'top',
+        theme: 'tomato',
+        content:'べっティングラウンドの最後にアクションする人',
+    });
+  </script>
+</span>
+を決めます。
+<br>
+カードを配るディーラーとは異なるので、間違えないように「ボタン（BTN）」と呼ばれています。
+<br><br>
+</div>
+</p>
+<h2 id="15">プレイヤーの配置とブラインド</h2>
+<p>
+<b>ここからゲームの流れを説明します。</b><br>
+<br>
+<div class="contentBox">
+<p>
+まずディーラーからカードが2枚配られます。配られる順番は、
+<span class="chip" id="test11"><b>スモールブラインド</b></span>
+<script>
+  // With the above scripts loaded, you can call `tippy()` with a CSS
+  // selector and a `content` prop:
+  tippy('#test11', {
+      placement: 'top',
+      theme: 'tomato',
+      content:'SBとも言い、ボタンの左側でBBが払った強制参加費の半分支払うポジションのこと',
+  });
+</script>
+<b>から時計回り</b>に配られます。<br><br>
+プレイヤーの配置(ポジション)は以下の通り<br>
+
+<br>
+<div style="text-align: center">
+<img src="rule_images/2.png" width=95%>
+</div>
+<br>
+<br>
+<p>
+始めに、スモールブラインドと
+  <span class="chip" id="test12">ビックブラインド</span>
+  <script>
+    // With the above scripts loaded, you can call `tippy()` with a CSS
+    // selector and a `content` prop:
+    tippy('#test12', {
+        placement: 'top',
+        theme: 'tomato',
+        content:'BBとも言い、SBの左側で強制参加費を支払うポジションのこと',
+    });
+  </script>
+</span>
+の人は、それぞれ予め決められている
+<span class="chip" id="test125">ブラインド</span>
+<script>
+  // With the above scripts loaded, you can call `tippy()` with a CSS
+  // selector and a `content` prop:
+  tippy('#test125', {
+      placement: 'top',
+      theme: 'tomato',
+      content:'強制参加費のこと',
+  });
+</script>
+を出します。
+<br>
+<br>
+今回は、スモールブラインドが100、ビックブラインドが200出すとします。<br>
+<br>
+ビックブラインドのブラインドは、スモールブラインドの2倍となるパターンが多いです。<br>
+このブラインドは、テーブルのレートによって異なります。
+<br>
+<br>
+</div>
+
+</p>
+
+<h2 id="16">プリフロップ</h2>
+<p><b>プリフロップ</b>は、カードが2枚配られて、コミュニティカードが０枚の状態のことです。
+<br>
+<br>
+<div class="contentBox">
+<span class="contentBoxbefore"></span>
+<p>
+プリフロップで最初にアクションを行うのは、UTGから時計回りに行います。<br>
+</p>
+
+<p>
+例えば、あなたはUTGで以下のカードが配られたとします。<br>
+<!-- <br>
+<br>
+<div style="text-align: center">
+<img src="rule_images/3.png" width=80%>
+</div>
+<br>
+<br> -->
+<br>
+<div style="text-align: center">
+<img src="rule_images/4.png" width=95%>
+</div>
+<br>
+<p>
+この2枚のカードと自分のポジションを踏まえて、ゲームに参加するかどうかを決めましょう。<br>
+※参加するかしないかは、<a href="handrange.html#handrange">プリフロップレンジ</a>を参考にしましょう。<br><br>
+あなたはUTGなので、まずあなたからアクションです。<br>
+取れる選択肢は、BBの200に対して、<br>
+
+「
+<span class="chip" id="test13"><b>レイズ</b></span>
+<script>
+  // With the above scripts loaded, you can call `tippy()` with a CSS
+  // selector and a `content` prop:
+  tippy('#test13', {
+      placement: 'top',
+      theme: 'tomato',
+      content:'相手の差し出した金額よりも大きな金額で勝負をしたい場合にチップを上乗せすること',
+  });
+</script>
+」「
+<span class="chip" id="test14"><b>コール</b></span>
+<script>
+  // With the above scripts loaded, you can call `tippy()` with a CSS
+  // selector and a `content` prop:
+  tippy('#test14', {
+      placement: 'top',
+      theme: 'tomato',
+      content:'相手の差し出した金額で勝負をすること',
+  });
+</script>
+
+」「
+<span class="chip" id="test15"><b>フォールド</b></span>
+<script>
+  // With the above scripts loaded, you can call `tippy()` with a CSS
+  // selector and a `content` prop:
+  tippy('#test15', {
+      placement: 'top',
+      theme: 'tomato',
+      content:'勝負を諦めること',
+  });
+</script>
+」のどれかになります。<br>
+<br>
+<br>
+参加をしない場合は「<b>フォールド</b>」を選択。「<b>フォールド</b>」した場合は、ポットを獲得することはできず、今までかけたチップを失います。<br>
+参加する場合は「<span class="chip" id="test14"><b>コール</b></span><script>
+  // With the above scripts loaded, you can call `tippy()` with a CSS
+  // selector and a `content` prop:
+  tippy('#test14', {
+      placement: 'top',
+      theme: 'tomato',
+      content:'相手の差し出した金額で勝負をすること',
+  });
+</script>」か「<span class="chip" id="test13"><b>レイズ</b></span><script>
+  // With the above scripts loaded, you can call `tippy()` with a CSS
+  // selector and a `content` prop:
+  tippy('#test13', {
+      placement: 'top',
+      theme: 'tomato',
+      content:'相手の差し出した金額よりも大きな金額で勝負をしたい場合にチップを上乗せすること',
+  });
+</script>」をします。<br>
+
+<br>
+今回あなたのハンドは「<b>レイズ</b>」をしたとしましょう。<br>
+すると、BTNのプレイヤーがコールをして、他のプレイヤーはフォールドしました。<br>
+<br>
+<br>
+<br>
+<div style="text-align:center">
+<img src="rule_images/5.png" width=95%>
+</div>
+<br>
+<br>
+<p>
+最後にレイズした人に対して、他の全員のプレイヤーが「コール」または「フォールド」すると次のラウンドにいきます。<br>
+全員が「フォールド」すると、そのゲームは終了し、残ったプレイヤーがポットを獲得します。<br>
+<br>
+つまり、<b> プレイヤー間で、賭け金の合意が取れると、次のラウンドに行くということ</b>です。<br>
+<br>
+次のラウンドにいくと、<br>
+最初に、3枚のコミュニティカードがオープンされます。<br>
+<br>
+</div>
+<h2 id="4">フロップ</h2>
+<p><b>フロップ</b>は3枚のコミュニティカードがオープンされた状態のことです。</p>
+<br>
+<br>
+<div class="contentBox">
+<span class="contentBoxbefore"></span>
+<br>
+<div style="text-align: center">
+<img src="rule_images/6.png" width=95%>
+</div>
+<br>
+<br>
+<p>
+コミュニティカード<span style="color:red;"><b>❤5 ❤6</span> <span style="color:blue">♦6</span></b>が、オープンされました。SBから時計回りにアクションをしていきます。<br>
+※プリフロップはUTGから、フロップ以降はSBから時計回りにアクションします。<br>
+<br>
+先にアクションをするプレイヤーは「
+<span class="chip" id="test16"><b>チェック</b></span>
+<script>
+  // With the above scripts loaded, you can call `tippy()` with a CSS
+  // selector and a `content` prop:
+  tippy('#test16', {
+      placement: 'top',
+      theme: 'tomato',
+      content:'追加でチップを支払うことをせずに、順番を回すこと',
+  });
+</script>
+」か「
+<span class="chip" id="test17"><b>ベット</b></span>
+<script>
+  // With the above scripts loaded, you can call `tippy()` with a CSS
+  // selector and a `content` prop:
+  tippy('#test17', {
+      placement: 'top',
+      theme: 'tomato',
+      content:'好きな金額のチップを差し出して、その金額で勝負を申し込むこと',
+  });
+</script>
+」の2択になります。<br>
+※「チェック」ができる時に、自分は役が弱いからといって「フォールド」するのはやめましょう。今後のコミュニティーカードによっては役が強くなることもありますし、相手の役が自分よりも弱い可能性もあります。必ず「チェック」で回しましょう。<br>
+
+<p>
+  順番が自分よりも前の人が「ベット」をした場合、「フォールド」「コール」「レイズ」の3択になります。<br>
+  ここでも最後に「ベット」または「レイズ」した人に対して、全員が「コール」か「フォールド」をするまで続きます。<br>
+  <br>
+  今回は、あなた（UTG）の「ベット」に相手(BTN)が「コール」を選択したとして、次のラウンドにいきましょう。
+  <br>
+  <br>
+</div>
+</p>
+
+<h2 id="5">ターン</h2>
+<p><b>ターン</b>は4枚のコミュニティカードがオープンされた状態のことです。</p>
+<br>
+<br>
+<div class="contentBox">
+<br>
+  <div style="text-align: center">
+  <img src="rule_images/7.png" width=95%>
+  </div>
+  <br>
+
+  次のラウンドにいくと、もう1枚のコミュニティカードがオープンされます。<br>
+  フロップと同じ流れになります。今回は「<b>♠K</b>」がでました。<br>
+  <br>
+  今回のラウンドは誰もベットせず、お互いチェックで回りました。<br>
+  誰もベットをせず全員がチェックをした場合も、次のラウンドにいきます。
+  <br>
+  <br>
+ </div>
+
+<h2 id="6">リバー</h2>
+<p><b>リバー</b>は5枚のコミュニティカードがオープンされた状態のことです。</p>
+<br>
+<br>
+  <div class="contentBox">
+<br>
+<div style="text-align: center">
+<img src="rule_images/8.png" width=95%>
+</div>
+<br>
+<p>
+  さらに、次のラウンドにいくと、もう1枚のコミュニティカードがオープンされます。
+  今回は「<span style="color:blue"><b>♦9</b></span>」がオープンされました。<br>
+  <br>
+  これが最後のラウンドになります。<br>
+  今回のラウンドは、あなたがベットをして、相手がコールしたとします。<br><br>
+</div>
+  <h2 id="7">ショーダウン</h2>
+  <p><b>ショーダウン</b>はお互いのハンドを見せあうことです。</p>
+  <br>
+  <br>
+  <div class="contentBox">
+  <br>
+  <div style="text-align: center">
+  <img src="rule_images/9.png" width=95%>
+  </div>
+    <br>
+    <br>
+    <p>
+    最後のベッティングラウンドが終わると、ハンドをショーダウンして、役の強さによって勝敗を決めます。<br>
+    カードを見せる順番は、最後のラウンドで、最後に「ベット」か「レイズ」をした人から時計回りになります。<br>
+    最後が「チェック」で回った場合には、SBから時計回りに見せていきます。<br>
+    <br>
+    今回は、最後にベットした人があなただったので、最初にハンドを見せます。<br>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center">
+    <img src="rule_images/10.png" width=95%>
+    </div>
+    <br>
+    <br>
+    <p>
+    あなたの役はQと6の2ペア、相手の役はが9と6の2ペアでした。Qの方が9より強いので、今回は<b>あなたの勝利でポットを獲得です。</b><br>
+    役(ハンド)の強さ一覧は<a href="handStrong.html">こちら</a><br>
+    <br>
+  </div>
+  </p>
+  <h1 id="8">まとめ</h1>
+  <p>
+    これがテキサスホールデムの流れです。<br>
+    <br>
+    プリフロップで最初の2枚が強くても、5枚のコミュニティカード次第では負けてしまうこともあります。<br>
+    本当はハンドが弱くても自分のハンドが強い様に主張して、相手を「フォールド」させることができれば、チップを獲得できます。<br>
+　　<br>
+    つまり、<b>強いハンドを作るだけのゲームではなく、ショーダウンで勝つか、相手を降ろして勝つゲーム</b>なのです。<br>
+  
+      ポーカーを実際にプレーしてみると運要素が大きいゲームと感じるかもしれませんが、技術と知識と経験が勝敗に大きく左右する<b>知的なスポーツ</b>なのです。<br>
+      <br>
+      テキサスホールデムの世界へようこそ。<br>
+      <br>
+      ここまで読んだら、<b>クイズ</b>(右上)をやってみましょう。
+      </p>
+
+    </body>
+    </html>

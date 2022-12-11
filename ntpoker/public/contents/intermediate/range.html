@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>レンジで考える</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+
+</head>
+
+
+<body>
+  <!-- <title>レンジで考える</title> -->
+  <br>
+  <br>
+  <div class="contentBox2">
+    <p class="contents">目次</p>
+    <ol class="step">
+      <li><a href="#1">ハンドレンジとは</a></li>
+      <ol class="step-child">
+        <li><a href="#8">ハンドレンジの考え方</a></li>
+        <li><a href="#9">具体例</a></li>
+      </ol>
+      <li><a href="#2">ハンドレンジvsハンドレンジで考える</a></li>
+      <li><a href="#3">ハンドレンジの推定方法</a></li>
+      <ol class="step-child">
+        <li><a href="#4">プリフロップのアクション</a></li>
+        <li><a href="#5">アクション/ベットサイズ</a></li>
+        <li><a href="#6">ハンドを振り返る</a></li>
+      </ol>
+      <li><a href="#7">まとめ</a></li>
+    </ol>
+    <br>
+  </div>
+  <h1 id="1">ハンドレンジとは</h1>
+  <h2 id="8">ハンドレンジの考え方</h2>
+  <p><b>ハンドレンジ</b>はあるプレイヤーが持ち得るであろうハンドの組み合わせのことです。<br>
+    <br>
+    ポーカーでは、常に相手がどんなハンドを持っているか考える必要があります。<br>
+    しかし、特定のハンドを予測するのは難しいため、<b>相手が持ち得る組み合わせ</b>で考えます。
+    <br>
+    <br>そのためには、プレーを進めながら「<b>相手が持ち得ない組合せ」を消していく</b>ことで相手のハンドレンジを絞っていく必要があります。<br>
+    <br>
+    これをまとめると
+    <br>
+    <br>
+    <b>・相手のハンドを推測しながらポーカーをプレーする<br>
+      <br>
+      ・特定のハンドを予測するのではなく考えうる組み合わせから推測<br>
+      <br>
+      ・思考のプロセスとして「持ち得ない組み合わせ」を消していく</b><br>
+    <br>
+    上記3つを考えながら、ポーカーをプレイしましょう。<br>
+    それでは、具体例を見てハンドレンジを確認してみましょう。
+    <br>
+    <h2 id="9">具体例</h2>
+    <div class="contentBox">
+      <br>
+      <p>
+        <b>プリフロップ</b><br>
+        <div style="text-align: center">
+          <img src="range_images/1.png" width=100%>
+        </div>
+        <br>
+        <p>
+          プリフロップで、UTGがレイズ600で参加して、COがレイズ1800(
+          <span class="chip" id="test20">3ベット</span>
+          <script>
+            // With the above scripts loaded, you can call `tippy()` with a CSS
+            // selector and a `content` prop:
+            tippy('#test20', {
+              placement: 'top',
+              theme: 'tomato',
+              content: 'ラウンドの最後にアクション出来る人のことを指し、最も有利なポジションのこと',
+            });
+          </script>
+          )を打ち、さらに、UTGがレイズ4500(
+          <span class="chip" id="test21">4ベット</span>
+          <script>
+            // With the above scripts loaded, you can call `tippy()` with a CSS
+            // selector and a `content` prop:
+            tippy('#test21', {
+              placement: 'top',
+              theme: 'tomato',
+              content: 'スリーベットに対して、さらにレイズをすること',
+            });
+          </script>
+          )をしました。<br>
+          <br>
+          UTGの
+          <span class="chip" id="test22">ハンドレンジ</span>
+          <script>
+            // With the above scripts loaded, you can call `tippy()` with a CSS
+            // selector and a `content` prop:
+            tippy('#test22', {
+              placement: 'top',
+              theme: 'tomato',
+              content: 'あるプレイヤーが持ち得るであろうハンドの組み合わせのこと',
+            });
+          </script>
+          は、例えば、JTsや65sなどの
+          <span class="chip" id="test23">スーテッドコネクター</span>
+          <script>
+            // With the above scripts loaded, you can call `tippy()` with a CSS
+            // selector and a `content` prop:
+            tippy('#test23', {
+              placement: 'top',
+              theme: 'tomato',
+              content: '同じ絵柄で連番のカードのこと',
+            });
+          </script>
+          の割合は少なく、[AA,KK,QQ,AK]などのプレミアハンドの割合が高いと考えられます。<br>
+          <br>
+    </div>
+    <h1 id="2">ハンドvsハンドレンジで考える</h1>
+    <p>
+      相手のハンドを、単体ではなくハンドレンジで考えることで、<b>自分のハンドが相手のハンドレンジに対して、どれくらいの強さ</b>なのかがわかります。<br>
+      <br>
+      相手のハンドレンジに対して自分のハンドの強さを推測することができれば、戦略的にバリューベット、ブラフベットを区別することができ、より利益的にプレーすることができます。<br>
+      <br>
+      <div class="wordBox">バリューベット</div>
+      <p>
+        相手より強いハンドを持っている時に、獲得できるチップの量を最大化することを目的としたベット</div>
+        <br><br>
+        <div class="wordBox">ブラフベット</div>
+        <p>相手より弱いハンドを持っている時に、自分より強いハンドをフォールドさせることを目的としたベット</div>
+          <br>
+          <br>
+          <p>
+            自分の役がいくら強くても、相手より弱ければ
+            <span class="chip" id="test90">ショーダウン</span>
+            <script>
+              // With the above scripts loaded, you can call `tippy()` with a CSS
+              // selector and a `content` prop:
+              tippy('#test90', {
+                placement: 'top',
+                theme: 'tomato',
+                content: 'お互いのハンドを見せ合うこと',
+              });
+            </script>
+            でポットを獲得することができません。<br>
+            ポーカーは、<b>相手のハンドレンジに対する自分のハンドの強さを相対的に考え、アクションを決める必要</b>があります。<br>
+            <br>
+            さらには、<b>相手があなたのハンドレンジをどのように考えている</b>かも重要です。
+            「ハンドレンジ vs ハンドレンジ」で考えることができたら、あなたはとても手強いプレーヤーになれます。<br>
+            これを考えることは難しいので、まずは<b>「自分のハンド vs 相手のハンドレンジ」</b>を考えてプレイしましょう。
+
+            <h1 id="3">ハンドレンジの推定方法</h1>
+            <p>
+              <span class="chip" id="test25">ハンドレンジ</span>
+              <script>
+                // With the above scripts loaded, you can call `tippy()` with a CSS
+                // selector and a `content` prop:
+                tippy('#test25', {
+                  placement: 'top',
+                  theme: 'tomato',
+                  content: 'あるプレイヤーが持ち得るであろうハンドの組み合わせのこと',
+                });
+              </script>
+              は人によっても大きく変わってきますが、代表的な推定方法を3つ紹介します。<br>
+            </p>
+
+            <h2 id="4">プリフロップのアクション</h2>
+            <p>
+              相手がどこのポジションで、どのようなアクションをしたかを確認しましょう。<br>
+              プリフロップレンジ表を確認することで、ある程度相手のハンドレンジを推定できます。<br>
+              <br>
+              例えば、プリフロップでポジションが最も弱い<b>UTG</b>がレイズで参加してきた場合、UTGのハンドレンジはそれなりに強いことが想定されます。
+            </p>
+
+            <h2 id="5">アクション/ベットサイズ</h2>
+            <p>
+              相手のアクション(レイズ、リレイズ、コール、チェック)や
+              ベットサイズを確認しましょう。<br>
+              相手をよく観察して、「相手の癖」を見つけ、ハンドレンジの推定に必要な情報も手に入れましょう。
+              <br>
+              <br>
+              代表的な傾向としては以下のような例があります。<br>
+              <br>
+              <b>・ずっとチェックする場合は、弱いハンドしか持っていない。<br>
+                <br>
+                ・ベットサイズが高い場合は、強いハンドを持っていることが多い。</b>
+
+              <h2 id="6">ハンドを振り返る</h2>
+              <p>
+                相手が過去ショーダウンしたハンドやアクションなどを振り返ることで、相手の傾向が見えてくるはずです。<br>
+                自分がフォールドしていても、他のプレーヤーがショーダウンしたハンドは貴重な情報なので必ず確認しましょう。
+                <br>
+                <br>
+                それでは、具体的なハンドレンジの推定方法を見てみましょう。
+                <br><br>
+                <div class="contentBox">
+                  <br>
+                  <p>
+                    <b>プリフロップ</b>
+                    <br>
+                    <div style="text-align: center">
+                      <img src="range_images/2.png" width=95%>
+                    </div>
+                    <br>
+                    <br>
+                    <p>
+                      あなたはUTGです。レイズ600で参加して、相手(BTN)がコールしました。<br>
+                      <br>
+                      <b>相手のコールしたハンド</b>を推定しましょう。<br>
+                      まず、相手のハンドを推定するために、初級編であったプリフロップレンジ表を参考にします。<br>
+                      <br>
+                      <br>
+                      <br>
+                      <div style="text-align: center">
+                        <img src="range_images/3.png" width=90%>
+                      </div>
+                      <br>
+                      <br>
+                      <p>
+                        自分のハンドが、レイズした人のポジションよりも1個上ならコール、2個以上ならさらにレイズ。同じか下だったらフォールドです。<br>
+                        <br>
+                        そのため、今回の相手のコールするハンドは<b>黄色で囲まれた部分</b>と推定でき、AAやKKなどの自分が負けているハンドは少ないと考えられます。
+                        相手のハンドレンジを頭に入れたうえで、フロップに行きましょう。<br>
+                        <br>
+                        <br>
+                        <div style="text-align: center">
+                          <img src="cb_images/yajirushi.png" width=10%>
+                        </div>
+                        <br>
+                        <br>
+                        <p>
+                          <b>フロップ</b>
+                          <br>
+                          <div style="text-align: center">
+                            <img src="range_images/4.png" width=100%>
+                          </div>
+                          <br>
+                          <br>
+                          <p>
+                            フロップは、<b><span style="color:blue;">♦A</span> <span style="color:black;">♠K</span><span
+                                style="color:green;"> ♣2</span></b>でした。<br>
+                            相手(BTN)のハンドレンジを考えると、相手の持ち得る役は、強くてもAヒットなどが推定されます。<br>
+                            あなたはAKを持っているので、相手のハンドレンジに対してとても強いことがわかります。<br>
+                            そのため、十分に
+                            <span class="chip" id="test26">バリューベット</span>
+                            <script>
+                              // With the above scripts loaded, you can call `tippy()` with a CSS
+                              // selector and a `content` prop:
+                              tippy('#test26', {
+                                placement: 'top',
+                                theme: 'tomato',
+                                content: '相手より強いハンドを持っている時に、獲得できるチップの量を最大化することを目的としたベット',
+                              });
+                            </script>
+                            を打つことができます。<br>
+                            <br>
+                </div>
+                <h1 id="7">まとめ</h1>
+                <p>
+                  本章では相手のハンドレンジを推定することで、より利益的にプレーをする方法について解説しました。<br>
+                  最初は難しいと思いますが、相手のハンドレンジを推定することは、ポーカーをプレーする上で常に考えなければなりません。<br>
+                  1つだけ注意してほしいことは、<b>相手の事を決めつけず、様々な可能性を考える事</b>です。<br>
+                  理論上、どんなハンドも持っている可能性があります。
+                </p>
+
+
+</body>
+
+</html>

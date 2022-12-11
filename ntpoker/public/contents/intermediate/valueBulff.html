@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ベットの考え方</title>
+<link rel="stylesheet" href="../style.css">
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+</head>
+
+
+<body>
+<div class="contentBox2">
+  <p class="contents">目次</p>
+  <ol class="step">
+    <li><a href="#1">ベットの考え方</a></li>
+    <li><a href="#2">ブラフとバリューの打ち方</a></li>
+    <ol class="step-child">
+      <li><a href="#3">相手のハンドレンジ</a></li>
+      <li><a href="#4">自分のハンドの強さ</a></li>
+      <li><a href="#5">具体例</a></li>
+    </ol>
+    <li><a href="#6">まとめ</a></li>
+  </ol>
+  <br>
+</div>
+<h1 id ="1">ブラフとバリューについて</h1>
+<p>
+  ポーカーの目的は<b>利益を最大化すること</b>です。 <br>
+  <br>
+  ベットについて着目すると、強いハンドと弱いハンドでバランスよくベットすることで、<b>ベットレンジ全体</b>での獲得チップを最大化する必要があります。<br>
+  <br>
+  しかし、この概念をマスターするにはEquityとバランシングをしっかりと理解しなければいけないため、まずは簡易的に以下のように考えましょう。
+</p>
+<br>
+<br>
+<div class="wordBox">バリューベット</div>
+<p>相手より強いハンドを持っている時に、獲得できるチップの量を最大化することを目的としたベット
+  <br>
+<div class="wordBox">ブラフベット</div>
+<p>相手より弱いハンドを持っているときに、自分より強いハンドをフォールドさせることを目的としたベット</div>
+</div>
+<h1 id ="2">ブラフとバリューの打ち方</h1>
+<p>
+  バリューべットを成立させるには、自分より弱いハンドをフォールドさせずポットを膨らまし、ブラフベットを成立させるには、自分より強いハンドをフォールドさせなければいけません。<br>
+  <br>
+  つまり、<b>相手の
+    <span class="chip" id="test47">ハンドレンジ</span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test47', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'あるプレイヤーが持ち得るであろうハンドの組み合わせのこと',
+      });
+     </script>
+  に対して自分のハンドがどれくらいの強さかを推測し、ブラフベットなのかバリューベットなのかを意識してベットする必要</b>があります。<br>
+  <br>
+  また、バリューベットをする際にはフォールドをさせない相手のハンドレンジ、ブラフベットをする際にはフォールドさせられる相手のハンドレンジを意識してベットしましょう。<br>
+  「レンジで考える」は<a href="range.html">こちら</a>
+</p>
+<h2 id ="3">相手のハンドレンジ</h2>
+<p>
+  プリフロップレンジやアクションから、相手のハンドレンジを推定しましょう。<br>
+
+</p>
+<h2 id ="4">自分のハンドの強さ</h2>
+<p>
+  相手のハンドレンジに対して、自分のハンドがどれくらい強いかを考えてみましょう。<br>
+  最初は自分のハンドを以下の3つに分けて考えましょう。<br>
+  <br>
+      <b>・バリューハンド<br>
+        <br>
+        ・ブラフハンド<br>
+        <br>
+        ・マージナルハンド
+      </b>
+  <br>
+  <br>
+  <br>
+  <div class="wordBox">バリューハンド</div>
+<p>相手のハンドレンジの多くに勝っているハンド<br>
+  <br>
+  <div class="contentBox">
+    <br>
+    <p>
+    <b>リバー</b><br>
+    <div style="text-align: center">
+    <img src="valueBulff_images/6.png" width=100%><br>
+    </div>
+    <br>
+    <p>
+    リバーであなたは9とJのツーペアでベット800を行った状況です。<br>
+    相手のハンドレンジには、以下の3種類が考えられます。<br>
+    <br>
+    ・ドロー滑りなどコールできないハンド<br>
+    <br>
+    ・88以下のポケットペア、9ヒット、7ヒット、4ヒット、Aハイなどあなた勝っているうえでコールがもらえ得るハンド<br>
+    <br>
+    ・44、77、Jなどあなたの負けているハンド<br>
+    <br>
+    <p>
+    この3種類の組み合わせの数を考えるとあなたが勝っているレンジの方が圧倒的に多いことが分かります。<br>
+    <br>以上からあなたのハンドは相手のハンドレンジの多くに勝っていると考えられ、このハンドは
+    <span data-descr<span class="chip" id="test48"><b>バリューハンド</b></span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test48', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'相手のハンドレンジの多くに勝っているハンド',
+      });
+     </script>
+    と位置づけることができます。<br>
+    <br>
+    さらに、相手がフォールドしない組み合わせに着目しても、あなたが勝っているハンドレンジが多く、
+    <span data-descr<span class="chip" id="test49">バリューターゲット</span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test49', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'自分が勝っているが、コールをもらえ得るハンド',
+      });
+     </script>
+    が多いことが推測されるのでリバーでのバリューベットが正当化されます。
+    <br>
+    <br>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="wordBox">ブラフハンド</div>
+  <p><b>ブラフハンド</b>は相手のハンドレンジの多くに負けているハンドです。
+    <br><br>
+  <div class="contentBox">
+    <p>
+    <b>リバー</b><br>
+    <div style="text-align: center">
+    <img src="valueBulff_images/7.png" width=100%>
+    </div>
+    <br>
+    <p>
+    あなたは<b><span style="color:red;" >❤J❤T</span></b>でストレート、フラッシュドローが引けず、相現状Jハイで相手のハンドレンジの多くに負けていると推測でき、
+    <span class="chip" id="test95"><b>ブラフハンド</b></span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test95', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'相手のハンドレンジの多くに負けているハンド',
+      });
+     </script>
+    と位置づけることができます。<br>
+    <br>
+    相手のミドルペア(4ヒット,6ヒット、9ヒット、77以下(44,66以外)のポケットペア)などフォールドしうるハンドをターゲットに
+    <span class="chip" id="test96"><b>ブラフベット</b></span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test96', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'相手より弱いハンドを持っているときに、自分より強いハンドをフォールドさせることを目的としたベット',
+      });
+     </script>
+    を行います。
+    <br>
+    <br>
+  </div>
+    <br>
+    <br>
+    <br>
+    <div class="wordBox">マージナルハンド</div>
+    <p>相手のハンドレンジに対して、勝っているか負けているかが微妙なハンドのことです。
+  <br>ショーダウンバリューがある一方で、負けているハンドも多いのでチェックすることが一般的です。
+<br><br>
+<div class="wordBox">ショーダウンバリュー</div>
+  <p>自分のハンドをショーダウンする価値のことです。<br>
+    ※相手のハンドレンジの中に、自分のハンドが勝っている組み合わせの存在を少なからず期待できる場合には価値があると判断できる</div>
+</div>
+<h2 id="5">具体例</h2>
+<p>
+  それでは具体的なシチュエーションで、バリューベット、ブラフベットついて考えてみましょう。
+<br><br>
+<div class="contentBox">
+  <br>
+  <p><b>プリフロップ</b><br>
+    <div style="text-align: center">
+    <img src="valueBulff_images/1.png" width=95%>
+    </div>
+    <br>
+    <br>
+    <p>
+    あなたはCOとします。<br>
+    プリフロップは、あなたはレイズ600で参加して相手(BB)がコールしました。<br>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center">
+    <img src="cb_images/yajirushi.png" width=10%>
+    </div>
+    <br>
+    <br>
+    <br>
+    <p>
+    <b>フロップ</b><br>
+    <div style="text-align: center">
+    <img src="valueBulff_images/2.png" width=95%>
+    </div>
+    <br>
+    <br>
+    <br>
+    <p>
+    相手のチェックに対してあなたはベット500を打ち、相手はコールしました。<br>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center">
+    <img src="cb_images/yajirushi.png" width=10%>
+    </div>
+    <br>
+    <br>
+    <p>
+    <b>ターン</b><br>
+    <div style="text-align: center">
+    <img src="valueBulff_images/3.png" width=95%>
+    </div>
+    <br>
+    <br>
+    <br>
+    <p>
+    相手のチェックに対して、あなたはベット1500を打ち相手は引き続きコールしました。<br>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center">
+    <img src="cb_images/yajirushi.png" width=10%>
+    </div>
+    <br>
+    <br>
+    <br>
+    <p>
+    <b>リバー</b>
+    <div style="text-align: center">
+    <img src="valueBulff_images/4.png" width=95%>
+    </div>
+    <br>
+    <br>
+    <p>
+    相手はチェックしました。<br>
+    <br>
+    この状況で、あなたはどのようなハンドで
+    <span class="chip" id="test98"><b>バリューベット</b></span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test98', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'相手より強いハンドを持っている時に、獲得できるチップの量を最大化することを目的としたベット',
+      });
+     </script>
+    、
+    <span class="chip" id="test99"><b>ブラフベット</b></span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test99', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'相手より弱いハンドを持っているときに、自分より強いハンドをフォールドさせることを目的としたベット',
+      });
+     </script>
+    を打つべきでしょうか？<br>
+    <br>
+    まず、相手のハンドレンジを考えてみましょう。<br>
+    相手は、プリフロップからずっとコールをしてます。そのため、AA、QQといった強いハンドは考えづらく、A、Q、9などのヒット、フラッシュドローやストレートドローなどのハンドが考えられます。<br>
+    <br>
+    相手のハンドレンジは以下のように分類できます。
+    <br><br>
+      <b>・強いハンド</b><br>
+      ストレート(86)、セット(55など)、ツーペア(A9、Q9など)、Aのワンペア<br>
+      <br>
+      <b>・マージナルなハンド</b><br>
+      Q、9、7のワンペアなど<br>
+      <br>
+      <b>・弱いハンド</b><br>
+      ストレートドロー滑り(KJ、KT、J8s、JTsなど)、フラッシュドロー滑り<br>
+      <br>
+    相手のハンドレンジを考慮すると、自分のハンドは以下のように分類することができます。
+    <br>
+    以下のバリューハンドを持っていた場合にはバリューベットを、ブラフハンドを持っていた場合にはブラフベットを打つことができ、マージナルなハンドを持っていた場合にはベットはしないようにしましょう。<br>
+    <br>
+    ・
+      <span class="chip" id="test100"><b>バリューハンド</b></span>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test100', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'相手のハンドレンジの多くに勝っているハンド',
+      });
+     </script>
+     </b></span><br>
+      ストレート(86),セット(AA,QQ,99,77,55),Aのワンペア,ツーペア(Q9,97など)<br><br>
+・   
+      <span class="chip" id="test101"><b>ブラフハンド</b></span>
+     <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#test101', {
+          placement: 'top',
+          theme: 'tomato',
+          content:'相手のハンドレンジの多くに負けているハンド',
+      });
+     </script>
+      </b></span><br>
+      ストレートドロー滑り(KJ、KTなど)、フラッシュドロー滑り(K8s,K6s,J8s,JTsなど)など<br><br>
+      ・
+        <span class="chip" id="test102"><b>マージナルハンド</b></span>
+        <script>
+          // With the above scripts loaded, you can call `tippy()` with a CSS
+          // selector and a `content` prop:
+          tippy('#test102', {
+              placement: 'top',
+              theme: 'tomato',
+              content:'相手のハンドレンジに対して、勝っているか負けているかが微妙なハンド',
+          });
+         </script>
+        </b></span><br>
+      Qのワンペア(QJ,QTなど),9のワンペア(K9,J9,T9など)、弱いポケット(66など)
+      <br>
+      <br>
+</div>
+<h1 id ="6">まとめ</h1>
+<p>
+  本章ではバリューベット、ブラフベットについて解説しました。<br>
+  <br>
+  相手のレンジを考えながら、ベットにバリューハンドとブラフハンドをバランスよく混ぜることで利益を最大化することができます。<br>
+  自分のハンドよりも、強いところだけにコールされて、弱いところだけをフォールドさせるベットが一番よくないです。<br>
+  相手のハンドレンジをよく考えて、バリューとブラフを打ちましょう。
+</p>
+
+</body>
+
+</html>
